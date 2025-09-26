@@ -28,14 +28,29 @@ people_records.append(('Volodymyr', 'Zin', 40, 'Engineer', 'Kyiv'))
 people_records.reverse()
 
 people_records[1], people_records[5] = people_records[5], people_records[1]
-print(people_records)
-
-limit = 30
-result = people_records[6][2] >= limit and people_records[10][2] >= limit and people_records[13][2] >= limit
-print("Усі троє мають вік 30 або більше:", result)
-
+print("people_records = [")
+for person in people_records:
+    print(f"{person},")
+print("]")
 
 
+limit_age = 30
+members = 3
+result = people_records[6][2] >= limit_age and people_records[10][2] >= limit_age and people_records[13][2] >= limit_age
+print(f"Усі {members} особи мають вік {limit_age} або більше:", result)
 
 
 
+
+# Тренуюсь:
+# for i in range(len(people_records)):
+#     if people_records[i][2] >= limit_age:
+#         print(people_records[i])
+#
+# for i in range(len(people_records)):
+#     if people_records[i][3] == 'Doctor' or people_records[i][3] == 'Product Manager':
+#         print(people_records[i])
+#
+# for i in range(len(people_records)):
+#     if people_records[i][4] == 'Chicago':
+#         print(people_records[i])
